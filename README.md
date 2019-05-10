@@ -12,7 +12,7 @@ Dataset B2: 10,000 random songs (ca. 10,000 observations of ca. 130 variables)
 
 # Collecting data with Spotipy
 
-With get_token.py it is possible to get access the Spotify API. Then if the access established then one use: 
+With get_token.py it is possible to get access the Spotify API. Then if the access established then one can use: 
 - random_songs.py to get randon song ids
 - playlist_get_songs.py to collect track infos from a user playlist
 - recommendations.py to get recommendations for a given genre
