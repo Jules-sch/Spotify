@@ -8,6 +8,7 @@ It contains data from approximately 1,300 songs that were Number 1 songs in the 
 For Dataset A the aim is to detect the main differences between the two groups.
 
 Dataset B: 10,000 recommended songs (ca. 10,000 observations of ca. 130 variables)
+
 Dataset B2: 10,000 random songs (ca. 10,000 observations of ca. 130 variables)
 
 # Collecting data with Spotipy
