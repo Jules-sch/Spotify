@@ -135,7 +135,7 @@ sum(err_mse)/10
 sum(zeros)/10
 
 
-##### random forest #######
+##### random forest cross validation #######
 
 library(randomForest)
 
@@ -162,10 +162,33 @@ sum(err_lreg_mae)/10
 sum(err_lreg_mse)/10
 
 
-##### save data as csv for python ####
-#load the data
-data_B <- read.csv('Data/dataframe_B_prediction.csv', header = TRUE)
-data_B[,-15] <- as.data.frame(scale(data_B[,-15]))
-data_B <- data_B[,-1]
-write.csv(data_B, file = 'Data/dataframe_B_prediction.csv')
+##### random forest dependancy plot #######
+
+
+#random forest
+data_B.rf <- randomForest(as.matrix(data_B_all[,-14]), as.matrix(data_B_all[ , 14]), importance = TRUE) 
+
+tiff('Plots/B_dependance_rf.tiff', width = 8, height = 6, units = 'in', res = 200)
+varImpPlot(fit)
+dev.off()
+
+tiff('Plots/B_parital_rf_year.tiff', width = 8, height = 6, units = 'in', res = 200)
+partialPlot(fit, data_B_all, x.var = rd_year)
+dev.off()
+
+tiff('Plots/B_parital_rf_inst.tiff', width = 8, height = 6, units = 'in', res = 200)
+partialPlot(fit, data_B_all, x.var = instrumentalness)
+dev.off()
+
+
+##### class tree #######
+
+library(rpart)
+library(partykit)
+
+reg.tree = rpart(popularity ~ rd_year+instrumentalness+timbre_mean_6 + duration, data=data_B_all) 
+tiff('Plots/B_reg_tree.tiff', width = 8, height = 6, units = 'in', res = 200)
+plot(as.party(reg.tree))
+dev.off()
+
 
