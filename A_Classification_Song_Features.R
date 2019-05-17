@@ -1,6 +1,6 @@
 ### Load the data ####
 
-dataA <- read.csv('Data/dataframe_A_with_song_ana.csv', header = TRUE)
+dataA <- read.csv('Data/dataframe_A_f_and_a.csv', header = TRUE)
 dataA <- na.omit(dataA[,-c(1,5)])
 
 ### bagging and boosting ####
