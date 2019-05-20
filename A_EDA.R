@@ -8,7 +8,6 @@ dataA$chart_random_f <- as.factor(dataA$chart_random_f)
 ######### EDA ###########
 
 library(vcd)
-boxplot(loudness~chart_random_f, data = dataA)
 
 # calculate odd-ratio
 cr_mode <- structable(chart_random_f~mode, data=dataA)
