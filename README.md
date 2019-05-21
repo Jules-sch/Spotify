@@ -16,7 +16,6 @@ Dataset B2: 10,000 random songs (ca. 10,000 observations of ca. 130 variables)
 With get_token.py it is possible to get access the Spotify API. Then if the access established then one can use: 
 - random_songs.py to get randon song ids
 - playlist_get_songs.py to collect track infos from a user playlist
-- recommendations.py to get recommendations for a given genre
 - search_song_get_id.py to get and id for track name and artist name
 - song_analysis.py get summarized values of the song analysis for song ids
 - song_features.py get song features for song ids
