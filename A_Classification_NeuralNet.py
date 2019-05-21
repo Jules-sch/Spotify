@@ -14,9 +14,9 @@ y = keras.utils.to_categorical(y)
 # function builds the model
 def build_model():
     network = keras.models.Sequential()
-    network.add(keras.layers.Dense(40, activation='relu', input_shape=(14,)))
-    network.add(keras.layers.Dense(20, activation='relu'))
-    network.add(keras.layers.Dense(2, activation='softmax'))
+    network.add(keras.layers.Dense(32, activation='relu', input_shape=(14,)))
+    network.add(keras.layers.Dense(16, activation='relu'))
+    network.add(keras.layers.Dense(2, activation = 'softmax'))
     network.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
     return network
 

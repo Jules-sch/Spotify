@@ -34,7 +34,8 @@ for train_index, test_index in kf.split(X):
     y_pred = clf.predict(X_test)
     err[i] = sum(abs(y_test-y_pred))/len(y_test)
     i +=1
-    
+
+print("the error for the song feature is:")
 print(sum(err)/10)
 
 
@@ -51,7 +52,6 @@ df1 = (df1.drop(df1.columns[0], axis=1))
 # only look at audio analysis
 cols = list(range(0,14))
 df1 = (df1.drop(df1.columns[cols], axis=1))
-
 
 
 X = np.array(df1.drop(['chart_random'], axis=1))
@@ -72,7 +72,8 @@ for train_index, test_index in kf.split(X):
     y_pred = clf.predict(X_test)
     err[i] = sum(abs(y_test-y_pred))/len(y_test)
     i +=1
-    
+
+print("the error for the audio analysis is:")
 print(sum(err)/10)
 
 
@@ -104,6 +105,8 @@ for train_index, test_index in kf.split(X):
     y_pred = clf.predict(X_test)
     err[i] = sum(abs(y_test-y_pred))/len(y_test)
     i +=1
-    
+
+
+print("the error for the full dataset is:")
 print(sum(err)/10)
 
