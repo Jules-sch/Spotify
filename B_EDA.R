@@ -27,7 +27,7 @@ dev.off()
 
 # linear regression on recommended songs
 l_reg <- lm(popularity~valence+loudness+acousticness+instrumentalness+speechiness+
-              danceability+energy+liveness+mode+tempo+duration+key, data = data_B)
+              liveness+mode+tempo+duration+key, data = data_B)
 summary(l_reg)
 
 
