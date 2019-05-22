@@ -171,7 +171,6 @@ sum(err_mse)/10
 
 ##### random forest dependancy plot #######
 
-
 #random forest
 data_B.rf <- randomForest(as.matrix(data_B_all[,-14]), as.matrix(data_B_all[ , 14]), importance = TRUE) 
 

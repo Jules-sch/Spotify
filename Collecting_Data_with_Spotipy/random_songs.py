@@ -38,7 +38,7 @@ def random_song(n):
     return ids
 
 # get the random songs
-r_song_ids = random_song(12)
+r_song_ids = random_song(10000)
 
 # save ids to csv
 with open('random_songs.csv', 'w', newline='') as myfile:

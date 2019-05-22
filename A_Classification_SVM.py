@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 from sklearn import (metrics, neighbors, model_selection,svm)
 
-### dataset with song features ####
+### dataset with audio features ####
 
 
 # read data
@@ -40,10 +40,10 @@ print(sum(err)/10)
 
 
 
-#### dataset with song analysis data ####
+#### dataset with audio analysis data ####
 
 
-# read dataframe with song analysis
+# read dataframe with audio analysis
 df1 = pd.read_csv("Data/dataframe_A_with_sa_scaled.csv", sep = ",")
 
 # drop the id
@@ -79,7 +79,7 @@ print(sum(err)/10)
 
 #### full dataset ####
 
-# read dataframe with song analysis
+# read full dataframe
 df1 = pd.read_csv("Data/dataframe_A_with_sa_scaled.csv", sep = ",")
 
 # drop the id

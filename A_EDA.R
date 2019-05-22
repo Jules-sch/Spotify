@@ -52,3 +52,13 @@ library(corrplot)
 jpeg('Plots/A_corrplot.tiff', width = 8, height = 8, units = 'in', res = 300)
 corrplot(cor(dataA_p), tl.col="black", method="color", addCoef.col = "black",order = "AOE",number.cex=0.6)
 dev.off()
+
+
+### logistic regression ###
+
+log_reg <- glm(chart_random~acousticness + instrumentalness + loudness
+               +speechiness + valence, family = binomial(link = "logit"), dataA)
+summary(log_reg)
+exp(log_reg$coefficients[c(6,4,2,3,5)])
+
+
