@@ -5,8 +5,8 @@ import csv
 from get_token import get_t
 import numpy as np
 
-# this program returns for a given dataframe with song features the summarized values
-# of the song analysis like mean of pitches, cor of pitches, covariances of pitches
+# this program returns for a given dataframe with audio features the summarized values
+# of the audio analysis like mean of pitches, cor of pitches, covariances of pitches
 # mean of timbres, var of timbres
 
 # get access

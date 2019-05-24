@@ -4,7 +4,7 @@ import pandas as pd
 import csv
 from get_token import get_t
 
-# this program creates a dataframe with song features for a list of song ids
+# this program creates a dataframe with audio features for a list of song ids
 
 token = get_t()
 sp = spotipy.Spotify(auth=token)
