@@ -6,6 +6,8 @@ import random
 from get_token import get_t
 
 # this program creates a list of random song ids and saves it to csv
+# The picks of the songs are not really random. But that is the best method
+# that I found.
 
 # get access to Spotify API
 token = get_t()
