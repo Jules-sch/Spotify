@@ -9,6 +9,8 @@ For Dataset A the aim is to detect the main differences between the two groups.
 
 Dataset B: 10,000 songs (ca. 10,000 observations of ca. 130 variables)
 
+Here the focus lies on the variable popularity, that measures the popularity of a song on Spotify.
+
 # Collecting data with Spotipy
 
 With get_token.py it is possible to get access the Spotify API. Then if the access established then one can use: 
