@@ -7,14 +7,14 @@ It contains data from approximately 1,300 songs that were Number 1 songs in the 
 
 For Dataset A the aim is to detect the main differences between the two groups.
 
-Dataset B: 10,000 random songs (ca. 10,000 observations of ca. 130 variables)
+Dataset B: 10,000 songs (ca. 10,000 observations of ca. 130 variables)
 
 # Collecting data with Spotipy
 
 With get_token.py it is possible to get access the Spotify API. Then if the access established then one can use: 
-- random_songs.py to get randon song ids
+- random_songs.py to get randon song ids (the are not really picked randomly!)
 - playlist_get_songs.py to collect track infos from a user playlist
 - search_song_get_id.py to get and id for track name and artist name
-- song_analysis.py get summarized values of the song analysis for song ids
-- song_features.py get song features for song ids
+- song_analysis.py get summarized values of the audio analysis for song ids
+- song_features.py get audio features for song ids
 
